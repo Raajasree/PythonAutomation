@@ -72,7 +72,7 @@ if __name__=='__main__':
             speak(results)
 
         if 'open notepad' in query:
-            npath = "C:system32\notepad.exe"
+            npath = "C:\\Users\\admin\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Notepad"
             os.startfile(npath)
 
         elif 'open paint' in query:
@@ -98,17 +98,21 @@ if __name__=='__main__':
         elif 'open linkedin' in query:
             webbrowser.open("www.linkedin.com")
 
-        elif 'open call engineering' in query:
+        elif 'open call engineering site' in query:
             webbrowser.open("https://caldimengg.com/")
 
         elif 'open my repo' in query:
             webbrowser.open("https://github.com/")
 
+        elif 'open caldim sheet' in query:
+            npath = "C:\\Users\\admin\\Desktop\\CaldimProject\\2022 project cost.xlsx"
+            os.startfile(npath)
+
         elif 'email to other friend' in query:
             try:
                 speak("What should I send?")
                 content = takecommand()
-                to = "indiranir31@gmail.com"
+                to = "gokulrcom@gmail.com"
                 sendEmail(to, content)
                 speak("Your email has been sent successfully")
             except Exception as e:
